@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.2.10
+ * @license AngularJS v1.2.9
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -386,7 +386,7 @@ angular.mock.$LogProvider = function() {
        *
        * @example
        * <pre>
-       * $log.error('Some Error');
+       * $log.log('Some Error');
        * var first = $log.error.logs.unshift();
        * </pre>
        */
@@ -1736,7 +1736,7 @@ angular.mock.$RootElementProvider = function() {
  * In addition, ngMock also extends various core ng services such that they can be
  * inspected and controlled in a synchronous manner within test code.
  *
- * {@installModule mock}
+ * {@installModule mocks}
  *
  * <div doc-module-components="ngMock"></div>
  *

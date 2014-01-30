@@ -1,0 +1,35 @@
+	<header>
+        <h1>Movie Search</h1>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div ng-controller="SearchCtrl">
+                    <div class="col-md-8">
+                        <form>
+                            <div class="form-group">
+                                <label>Movie Name</label>
+                                <input class="form-control" placeholder="Enter movie name ..." ng-model="moviename" />
+                            </div>
+        
+                            <p class="center">
+                                <button type="submit" class="btn btn-default" ng-click="onSearchClicked(moviename)"> Search </button>
+                            </p>
+        
+                            <div class="form-group">
+                                <label>Filter the search results</label>
+                                <input class="form-control" placeholder="Enter filter ..." ng-model="query" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table table-striped">
+                            <tr ng-repeat="movie in movieResult.movies | filter:query">
+                                <td>{{movie.title}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
