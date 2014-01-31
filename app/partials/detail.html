@@ -1,0 +1,23 @@
+        <div class="container">
+            <div class="row">
+
+                <h6 ng-model="movie_results">{{movie_results}}</h6>
+
+                <div class="col-md-12">
+                    <div>
+                        <h1>{{movie.title}}</h1>
+                        <h3>{{movie.year}} {{movie.mpaa_rating}}</h3>
+                    </div>
+                </div>      
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <p>{{movie.critics_consensus}}</p>
+                    <ul>
+                        <li ng-repeat="cast in movie.abridged_cast">{{cast.name}} - {{cast.characters[0]}}</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <img class="img-responsive" ng-src="{{movie.posters.original}}">
+                </div>
+            </div>
+        </div>
+        <!-- <p>The id of the movie is: {{movie}}</p> -->

@@ -1,0 +1,29 @@
+        <div class="container">
+            <div class="row">
+
+                <h6 ng-model="movie_results">{{movie_results}}</h6>
+
+                <div class="col-md-12">
+                    <div>
+                        <h1>{{movie.title}}</h1>
+                        <h3>{{movie.year}} {{movie.mpaa_rating}}</h3>
+                    </div>
+                </div>      
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <ul>
+                        <li ng-repeat="clip in clipList">
+                            <ul>
+                                <li>{{clip.title}}:</li>
+                                <li>
+                                    <a href="{{clip.links.alternate}}" target="_blank" alternate="{{clip.title}}">
+                                        <img class="img-responsive" ng-src="{{clip.thumbnail}}" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <p>The id of the movie is: {{movie}}</p> -->
+

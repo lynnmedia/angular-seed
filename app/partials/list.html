@@ -1,0 +1,15 @@
+        <div class="container">
+            <div class="row">
+
+                <h6 ng-model="movie_results">{{movie_results}}</h6>
+
+                <div class="col-md-8">
+                    <table class="table table-striped">
+                        <tr ng-repeat="movie in moviesList | filter:query">
+                            <td><a href="#/movie/{{movie.id}}">{{movie.title}} ({{movie.year}})</a></td>
+                            <td><a href="#/video/{{movie.id}}" class="red-text">[Watch Trailer]</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
